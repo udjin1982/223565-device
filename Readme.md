@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Evgen Farafonov](https://up.htmlacademy.ru/htmlcss/16/user/223565).
-* Наставник: `Неизвестно`.
+* Наставник: [Анастасия Мусаэльян](https://htmlacademy.ru/profile/id124940).
 
 ---
 
