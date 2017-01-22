@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'GilroyExtraBold';
+    src: url('../fonts/gilroy/gilroyextrabold.woff2') format('woff2'),
+         url('../fonts/gilroy/gilroyextrabold.woff') format('woff'),
+         url('../fonts/gilroy/Gilroyextrabold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'GilroyLight';
+    src: url('../fonts/gilroy/gilroylight.woff2') format('woff2'),
+         url('../fonts/gilroy/gilroylight.woff') format('woff'),
+         url('../fonts/gilroy/Gilroylight.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/opensans/opensans.woff2') format('woff2'),
+         url('../fonts/opensans/opensans.woff') format('woff'),
+         url('../fonts/opensans/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('../fonts/opensans/opensanslight.woff2') format('woff2'),
+         url('../fonts/opensans/opensanslight.woff') format('woff'),
+         url('../fonts/opensans/OpenSans-Light.ttf') format('truetype');
+}
+
+body {
+    padding: 40px 20px 0 20px;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* HEADER */
+.header {
+    width: 1160px;
+    margin: 0 auto;
+    background-color: rgba(240,197,46,0.5);
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+    .header_logo {
+        
+    }
+    
+        .header_logo img {
+            
+        }
+    
+    .header_search_wrap {
+        outline: 1px solid red;
+    }
+    
+    .header_search_wrap a {
+        font: 15px/36px 'OpenSansLight', sans-serif;
+        color: #000;
+        text-decoration: none;
+        display: inline-block;
+        margin-left: 65px;
+        outline: 1px solid red;
+        cursor: pointer;
+    }
+    
+        .header_enter_wrap {
+            float: right;
+            outline: 1px solid blue;
+            width: 500px;
+        }
+        
+            .header_cart {
+                float: right;
+            }
+            
+            .header_cart span {
+                display: inline-block;
+                outline: 1px solid blue;
+                width: 12px;
+                height: 12px;
+                margin-right: 12px;
+                background: url('../img/sprite1.png') -110px -29px no-repeat;
+                
+            }
+            
+            .header_compare {
+                float: right;
+            }
+            
+            .header_enter {
+                
+            }

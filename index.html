@@ -2,11 +2,45 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
+    <title>Device</title>
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+    <!-- HEADER -->
+    <header class="header">
+        <!-- logo -->
+        <a class="header_logo" href="#">
+            <img src="img/logo.png" alt="Логотип Device" />
+        </a>
+        
+        <!-- first block -->
+        <div class="header_search_wrap clearfix">
+            <div class="header_enter_wrap clearfix">
+                <a class="header_cart" href="#"><span></span>Корзина</a>
+                <a class="header_compare" href="#"><span></span>Сравнить</a>
+                <a class="header_enter" href="#"><span></span>Войти</a>
+            </div>
+            
+            <form class="header_search">
+                <input type="text" name="search" placeholder="Поиск по сайту" />
+                <button type="submit">Найти</button>
+            </form>
+        </div>
+        
+        <!-- second block -->
+        <div class="header_nav_wrap">
+            <ul class="header_nav">
+                <li><a href="#">Виртуальная реальность</a></li>
+                <li><a href="#">Виртуальная реальность</a></li>
+                <li><a href="#">Виртуальная реальность</a></li>
+                <li><a href="#">Виртуальная реальность</a></li>
+                <li><a href="#">Виртуальная реальность</a></li>
+                <li><a href="#">Виртуальная реальность</a></li>
+            </ul>
+        </div>
+            
+            
+    </header>
   </body>
 </html>
