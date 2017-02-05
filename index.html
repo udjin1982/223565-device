@@ -9,15 +9,15 @@
   <body>
     <!-- HEADER -->
     <header class="header container">
-        <!-- header first block -->
+        <!-- header - first block -->
         <div class="search_wrap clearfix">
             <!-- logo -->
             <a class="header_logo">Device</a>
         
             <div class="button_wrap clearfix">
-                <a class="button_cart btn_style" href="#"><span></span>Корзина</a>
-                <a class="button_compare btn_style" href="#"><span></span>Сравнить</a>
-                <a class="button_enter btn_style" href="#"><span></span>Войти</a>
+                <a class="button_cart btn_style" href="#">Корзина</a>
+                <a class="button_compare btn_style" href="#">Сравнить</a>
+                <a class="button_enter btn_style" href="#">Войти</a>
             </div>
             
             <form class="search_form" action="" method="get">
@@ -26,7 +26,7 @@
             </form>
         </div>
         
-        <!-- header second block -->
+        <!-- header - second block -->
         <nav class="nav_wrap clearfix">
             <div class="nav_page">
                 <a class="btn_style" href="#">Контакты</a>
@@ -54,34 +54,112 @@
     </header>
     
     <!-- SECTION SLIDER -->
-    <section class="slider container">
-        <div class="slider_block">
-            <img src="img/slider-1.jpg" alt="Селфи-палка" width="384" height="486" />
+    <section class="sliders container">
+        <!-- slider 1 -->
+        <div id="slider_1" class="slider slider_active">
+            <div class="slider_block">
+                <img src="img/slider-1.png" alt="Селфи-палка" width="384" height="486" />
+            </div>
+            <div class="slider_block">
+                <h2 class="slider_title">Делай селфи,<br />
+                    как Бен Стиллер!</h2>
+                <p class="slider_text">Самая длинная палка для селфи доступна в нашем магазине.<br />
+                    Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                
+                <a class="slider_detail" href="#">Подробнее</a>
+                
+                <table class="slider_options">
+                    <tr>
+                        <td>8,5 м</td>
+                        <td>5 кг</td>
+                        <td>Карбон</td>
+                    </tr>
+                    <tr>
+                        <td>Длина палки</td>
+                        <td>Вес палки</td>
+                        <td>Материал</td>
+                    </tr>
+                </table>
+            </div>
+            <span class="slider_number">01</span>
         </div>
-        <div class="slider_block">
-            <h2 class="slider_title">Делай селфи,<br />
-                как Бен Стиллер!</h2>
-            <p class="slider_text">Самая длинная палка для селфи доступна в нашем магазине.<br />
-                Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-            
-            <a class="slider_detail" href="#">Подробнее</a>
-            
-            <table class="slider_options">
-                <tr>
-                    <td>8,5 м</td>
-                    <td>5 кг</td>
-                    <td>Карбон</td>
-                </tr>
-                <tr>
-                    <td>Длина палки</td>
-                    <td>Вес палки</td>
-                    <td>Материал</td>
-                </tr>
-            </table>
+        
+        <!-- slider 2 -->
+        <div id="slider_2" class="slider">
+            <div class="slider_block">
+                <img src="img/slider-2.png" alt="Селфи-палка" width="384" height="486" />
+            </div>
+            <div class="slider_block">
+                <h2 class="slider_title">Худеем<br />
+                    правильно!</h2>
+                <p class="slider_text">Мотивирующие фитнесс-браслеты помогут найти в себе силы<br />
+                не пропускать занятия и соблюдать диету.</p>
+                
+                <a class="slider_detail" href="#">Подробнее</a>
+                
+                <table class="slider_options">
+                    <tr>
+                        <td>48 часов</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Без подзарядки</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <span class="slider_number">02</span>
+        </div>
+        
+        <!-- slider 3 -->
+        <div id="slider_3" class="slider">
+            <div class="slider_block">
+                <img src="img/slider-3.png" alt="Селфи-палка" width="384" height="486" />
+            </div>
+            <div class="slider_block">
+                <h2 class="slider_title">Порхает как бабочка,<br />
+                    жалит как пчела!</h2>
+                <p class="slider_text">Этот обычный, на первый взгляд, квадрокоптер оснащен <br />
+                    мощным лазером, замаскированным под стандартную камеру.</p>
+                
+                <a class="slider_detail" href="#">Подробнее</a>
+                
+                <table class="slider_options">
+                    <tr>
+                        <td>800 м</td>
+                        <td>50 м</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Дальность полета</td>
+                        <td>Радиус поражения</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <span class="slider_number">03</span>
+        </div>
+        
+        <!-- slider btn -->
+        <div class="sliders_btn">
+            <span id="slider_btn_1" class="slider_btn slider_btn_on"></span>
+            <span id="slider_btn_2" class="slider_btn"></span>
+            <span id="slider_btn_3" class="slider_btn"></span>
         </div>
     </section>  
     
     <!-- SECTION PRODUCTS -->
+    <section class="products container">
+        <a class="product" href="#">Виртуальная<br />реальность</a>
+        <a class="product" href="#">Моноподы<br />для селфи</a>
+        <a class="product" href="#">Экшн-камеры</a>
+        <a class="product" href="#">Фитнесс<br />браслеты</a>
+        <a class="product" href="#">Умные часы</a>
+        <a class="product" href="#">Квадрокоптеры</a>
+    </section>
+    <!-- old version 
     <section class="products container">
         <div class="product">
             <a class="product_image" href="#">Виртуальная реальность</a>
@@ -108,17 +186,21 @@
             <a class="product_title" href="#">Квадрокоптеры</a>
         </div>
     </section>
+    -->
     
     <!-- SECTION SERVICES -->
     <section class="services">
         <div class="container">
+            <!-- slider btn -->
             <ul class="services_list">
-                <li><a class="service_active" href="#">Доставка</a></li>
-                <li><a href="#">Гарантия</a></li>
-                <li><a href="#">Кредит</a></li>
+                <li><a id="service_btn_1" class="js_service service_active" href="#">Доставка</a></li>
+                <li><a id="service_btn_2" class="js_service" href="#">Гарантия</a></li>
+                <li><a id="service_btn_3" class="js_service" href="#">Кредит</a></li>
             </ul>
+            
             <div class="services_slider">
-                <div class="services_slide services_slide_active">
+                <!-- slider 1 -->
+                <div id="service_slide_1" class="services_slide services_slide_active">
                     <h3 class="slider_title">Доставка</h3>
                     <p class="slider_text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
                     <div class="slider_img">
@@ -126,7 +208,8 @@
                     </div>
                 </div>
                 
-                <div class="services_slide">
+                <!-- slider 2 -->
+                <div id="service_slide_2" class="services_slide">
                     <h3 class="slider_title">Гарантия</h3>
                     <p class="slider_text">Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
                     <div class="slider_img">
@@ -134,7 +217,8 @@
                     </div>
                 </div>
                 
-                <div class="services_slide">
+                <!-- slider 3 -->
+                <div id="service_slide_3" class="services_slide">
                     <h3 class="slider_title">Кредит</h3>
                     <p class="slider_text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
                     <div class="slider_img">
@@ -145,15 +229,51 @@
         </div>
     </section>
     
+    <!-- SECTION COMPANY -->
+    <section class="company container">
+        <div class="company_dji"></div>
+        <div class="company_spg"></div>
+        <div class="company_gopro"></div>
+        <div class="company_vive"></div>
+    </section>
+    
+    <!-- SECTION INFO -->
+    <section class="info container">
+        <div class="about">
+            <h2 class="slider_title">О нас</h2>
+            <p class="slider_text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+            <p class="slider_text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+            
+            <ul class="about_list">
+                <li>Деловые Линии</li>
+                <li>Автотрейдинг</li>
+                <li>ЖелДорЭкспедиция</li>
+            </ul>
+            
+            <a class="slider_detail" href="#">Подробнее о нас</a>
+        </div>
+        
+        <div class="contacts">
+            <h2 class="slider_title">Контакты</h2>
+            <p class="slider_text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+            
+            <a class="contacts_map" href="#">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d4498.251079400152!2d37.52477129215215!3d55.68680511910242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTE5MzEx!3m2!1d55.687031!2d37.529618!5e0!3m2!1sru!2sua!4v1486299079986" width="560" height="222" style="border:0" allowfullscreen></iframe>
+            </a>
+            
+            <a id="js_popup_open" class="slider_detail" href="#">Напишите нам</a>
+        </div>
+    </section>
+    
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <section class="footer_nav clearfix">
                 <a class="footer_logo" href="#">Device</a>
                 <div class="footer_btn_wrap">
-                    <a class="button_enter" href="#"><span></span>Войти</a>
-                    <a class="button_compare" href="#"><span></span>Сравнить</a>
-                    <a class="button_cart" href="#"><span></span>Корзина</a>
+                    <a class="button_enter" href="#">Войти</a>
+                    <a class="button_compare" href="#">Сравнить</a>
+                    <a class="button_cart" href="#">Корзина</a>
                 </div>
             </section>
             
@@ -178,5 +298,30 @@
             </section>
         </div>
     </footer>
+    
+    <div class="popup">
+        <form class="popup_form" action="" method="post">
+            <label class="label_inline">Ваше имя:
+                <input type="text" name="name" placeholder="Представьтесь, пожалуйста" />
+            </label>
+            <label class="label_inline">Ваш e-mail:
+                <input type="email" name="email" placeholder="Для отправки ответа" required />
+            </label>
+            <label class="label_block">Текст письма:
+                <textarea placeholder="В свободной форме"></textarea>
+            </label>
+            
+            <button class="slider_detail" type="submit">Отправить</button>
+        </form>
+        <div id="js_popup_close" class="popup_close"></div>
+    </div>
+    
+    <div class="paranja">
+        <div class="popup_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d4498.251079400152!2d37.52477129215215!3d55.68680511910242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTE5MzEx!3m2!1d55.687031!2d37.529618!5e0!3m2!1sru!2sua!4v1486299079986" width="960" height="560" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    <script src="js/workscript.js" type="text/javascript"></script>
   </body>
 </html>
