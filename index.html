@@ -8,39 +8,175 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header class="header">
-        <!-- logo -->
-        <a class="header_logo" href="#">
-            <img src="img/logo.png" alt="Логотип Device" />
-        </a>
+    <header class="header container">
+        <!-- header first block -->
+        <div class="search_wrap clearfix">
+            <!-- logo -->
+            <a class="header_logo">Device</a>
         
-        <!-- first block -->
-        <div class="header_search_wrap clearfix">
-            <div class="header_enter_wrap clearfix">
-                <a class="header_cart" href="#"><span></span>Корзина</a>
-                <a class="header_compare" href="#"><span></span>Сравнить</a>
-                <a class="header_enter" href="#"><span></span>Войти</a>
+            <div class="button_wrap clearfix">
+                <a class="button_cart btn_style" href="#"><span></span>Корзина</a>
+                <a class="button_compare btn_style" href="#"><span></span>Сравнить</a>
+                <a class="button_enter btn_style" href="#"><span></span>Войти</a>
             </div>
             
-            <form class="header_search">
+            <form class="search_form" action="" method="get">
                 <input type="text" name="search" placeholder="Поиск по сайту" />
-                <button type="submit">Найти</button>
+                <input type="submit" value="Найти" />
             </form>
         </div>
         
-        <!-- second block -->
-        <div class="header_nav_wrap">
-            <ul class="header_nav">
-                <li><a href="#">Виртуальная реальность</a></li>
-                <li><a href="#">Виртуальная реальность</a></li>
-                <li><a href="#">Виртуальная реальность</a></li>
-                <li><a href="#">Виртуальная реальность</a></li>
-                <li><a href="#">Виртуальная реальность</a></li>
-                <li><a href="#">Виртуальная реальность</a></li>
+        <!-- header second block -->
+        <nav class="nav_wrap clearfix">
+            <div class="nav_page">
+                <a class="btn_style" href="#">Контакты</a>
+                <a class="btn_style" href="#">Доставка</a>
+                <a class="btn_style" href="#">Гарантия</a>
+            </div>
+            
+            <ul class="nav_list">
+                <li><p class="btn_style">Каталог товаров</p>
+                    <ul class="nav_list_sub">
+                        <li><a class="btn_style" href="#">Виртуальная реальность</a></li>
+                        <li><a class="btn_style" href="#">Моноподы для селфи</a></li>
+                        <li><a class="btn_style" href="#">Экшн-камеры</a></li>
+                    </ul>
+                    <ul class="nav_list_sub">
+                        <li><a class="btn_style" href="#">Фитнесс-браслеты</a></li>
+                        <li><a class="btn_style" href="#">Умные часы</a></li>
+                    </ul>
+                    <ul class="nav_list_sub">
+                        <li><a class="btn_style" href="#">Квадрокоптеры</a></li>
+                    </ul>
+                </li>
             </ul>
-        </div>
-            
-            
+        </nav>
     </header>
+    
+    <!-- SECTION SLIDER -->
+    <section class="slider container">
+        <div class="slider_block">
+            <img src="img/slider-1.jpg" alt="Селфи-палка" width="384" height="486" />
+        </div>
+        <div class="slider_block">
+            <h2 class="slider_title">Делай селфи,<br />
+                как Бен Стиллер!</h2>
+            <p class="slider_text">Самая длинная палка для селфи доступна в нашем магазине.<br />
+                Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+            
+            <a class="slider_detail" href="#">Подробнее</a>
+            
+            <table class="slider_options">
+                <tr>
+                    <td>8,5 м</td>
+                    <td>5 кг</td>
+                    <td>Карбон</td>
+                </tr>
+                <tr>
+                    <td>Длина палки</td>
+                    <td>Вес палки</td>
+                    <td>Материал</td>
+                </tr>
+            </table>
+        </div>
+    </section>  
+    
+    <!-- SECTION PRODUCTS -->
+    <section class="products container">
+        <div class="product">
+            <a class="product_image" href="#">Виртуальная реальность</a>
+            <a class="product_title" href="#">Виртуальная<br />реальность</a>
+        </div>
+        <div class="product">
+            <a class="product_image" href="#">Моноподы для селфи</a>
+            <a class="product_title" href="#">Моноподы<br />для селфи</a>
+        </div>
+        <div class="product">
+            <a class="product_image" href="#">Экшн-камеры</a>
+            <a class="product_title" href="#">Экшн-камеры</a>
+        </div>
+        <div class="product">
+            <a class="product_image" href="#">Фитнесс-браслеты</a>
+            <a class="product_title" href="#">Фитнесс<br />браслеты</a>
+        </div>
+        <div class="product">
+            <a class="product_image" href="#">Умные часы</a>
+            <a class="product_title" href="#">Умные часы</a>
+        </div>
+        <div class="product">
+            <a class="product_image" href="#">Квадрокоптеры</a>
+            <a class="product_title" href="#">Квадрокоптеры</a>
+        </div>
+    </section>
+    
+    <!-- SECTION SERVICES -->
+    <section class="services">
+        <div class="container">
+            <ul class="services_list">
+                <li><a class="service_active" href="#">Доставка</a></li>
+                <li><a href="#">Гарантия</a></li>
+                <li><a href="#">Кредит</a></li>
+            </ul>
+            <div class="services_slider">
+                <div class="services_slide services_slide_active">
+                    <h3 class="slider_title">Доставка</h3>
+                    <p class="slider_text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                    <div class="slider_img">
+                        <img src="img/service_1.png" alt="service_1" width="136" height="164" />
+                    </div>
+                </div>
+                
+                <div class="services_slide">
+                    <h3 class="slider_title">Гарантия</h3>
+                    <p class="slider_text">Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+                    <div class="slider_img">
+                        <img src="img/service_2.png" alt="service_2" width="171" height="195" />
+                    </div>
+                </div>
+                
+                <div class="services_slide">
+                    <h3 class="slider_title">Кредит</h3>
+                    <p class="slider_text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+                    <div class="slider_img">
+                        <img src="img/service_3.png" alt="service_3" width="156" height="188" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <section class="footer_nav clearfix">
+                <a class="footer_logo" href="#">Device</a>
+                <div class="footer_btn_wrap">
+                    <a class="button_enter" href="#"><span></span>Войти</a>
+                    <a class="button_compare" href="#"><span></span>Сравнить</a>
+                    <a class="button_cart" href="#"><span></span>Корзина</a>
+                </div>
+            </section>
+            
+            <section class="footer_contacts clearfix">
+                <p class="footer_address">г. Москва, ул. Строителей, 15</p>
+                <p class="footer_tel">Тел.: +7 (495) 495-95-95</p>
+                <div class="footer_service">
+                    <a href="#">Доставка</a>
+                    <a href="#">Гарантия</a>
+                    <a href="#">Контакты</a>
+                </div>
+            </section>
+            
+            <section class="footer_icons clearfix">
+                <div class="footer_line"></div>
+                <a class="footer_developer" href="#">Html-academy</a>
+                <div class="footer_social">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </section>
+        </div>
+    </footer>
   </body>
 </html>
