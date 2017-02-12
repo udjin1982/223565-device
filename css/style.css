@@ -23,8 +23,13 @@
          url('../fonts/opensans/OpenSans-Light.ttf') format('truetype');
 }
 
+html {
+    height: 100%;
+}
+
 body {
     padding-top: 40px;
+    height: 100%;
 }
 
 .container {
@@ -52,10 +57,10 @@ body {
     opacity: 0.3;
 }
 
-/* HEADER */
+/* ======================== HEADER ======================== */
 .header {
     background-color: #f7e296;
-    padding: 0 60px 10px;
+    padding: 0 60px 53px;
     box-sizing: border-box;
 }
 
@@ -141,6 +146,7 @@ body {
         
             .search_form input {
                 display: inline-block;
+                vertical-align: top;
                 height: 50px;
                 box-sizing: border-box;
                 border: 2px solid #000;
@@ -236,6 +242,17 @@ body {
             font: 18px 'GilroyExtraBold', 'Arial', sans-serif;
         }
         
+            .nav_btn::after {
+                content: "";
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                background-image: url("../img/sprite-bg.png");
+                background-repeat: no-repeat;
+                background-position: -300px 0;
+                margin-left: 13px;
+            }
+        
         .nav_catalog {
             padding-bottom: 34px;
             padding-top: 30px;
@@ -278,11 +295,13 @@ body {
                             text-decoration: none;
                             cursor: pointer;
                         }
-            
+
+/* ======================== PAGE INDEX ======================== */
+    
 /* SECTION SLIDER */
 .sliders {
     font-size: 0;
-    padding: 42px 0 104px;
+    padding: 0 0 104px 0;
     position: relative;
     z-index: 1;
 }
@@ -291,7 +310,7 @@ body {
         content: "";
         display: block;
         width: 100%;
-        height: 155px;
+        height: 112px;
         background-color: #f7e296;
         position: absolute;
         top: 0;
@@ -408,13 +427,26 @@ body {
                         width: 140px;
                     }
             
-            .slider_number {
+            
+            .slider::before {
+                display: block;
                 position: absolute;
                 top: -32px;
                 right: 60px;
                 color: #fff;
                 font: 180px 'GilroyExtraBold', 'Arial', sans-serif;
-                z-index: -1;
+            }
+            
+            .slider:nth-of-type(1)::before {
+                content: "01";
+            }
+            
+            .slider:nth-of-type(2)::before {
+                content: "02";
+            }
+            
+            .slider:nth-of-type(3)::before {
+                content: "03";
             }
         
         .sliders_btn {
@@ -426,6 +458,7 @@ body {
             
             .slider_btn {
                 display: inline-block;
+                vertical-align: top;
                 width: 10px;
                 height: 10px;
                 margin-left: 23px;
@@ -663,32 +696,28 @@ body {
                     margin-bottom: 28px;
                 }
                 
-                .services_slide .slider_text {
-                    
-                }
+                    .services_slide::before {
+                        content: "";
+                        display: block;
+                        height: 200px;
+                        position: absolute;
+                        top: -20px;
+                        right: 44px;
+                        background-image: url('../img/sprite-bg.png');
+                        background-repeat: no-repeat;
+                    }
                 
-                .services_slide .slider_img {
-                    height: 200px;
-                    position: absolute;
-                    top: -20px;
-                    right: 44px;
-                    text-align: center;
-                    line-height: 200px;
-                    background-image: url('../img/sprite-bg.png');
-                    background-repeat: no-repeat;
-                }
-                
-                .services_slide:nth-of-type(1) .slider_img {
+                .services_slide:nth-of-type(1)::before {
                     background-position: -650px 0;
                     width: 160px;
                 }
                 
-                .services_slide:nth-of-type(2) .slider_img {
+                .services_slide:nth-of-type(2)::before {
                     background-position: -830px 0;
                     width: 140px;
                 }
                 
-                .services_slide:nth-of-type(3) .slider_img {
+                .services_slide:nth-of-type(3)::before {
                     background-position: -990px 0;
                     width: 175px;
                 }
@@ -809,6 +838,7 @@ body {
                 
                 .about .slider_detail {
                     margin-top: 55px;
+                    width: 260px;
                 }
     
     .contacts {
@@ -838,8 +868,141 @@ body {
             right: 0;
             z-index: 1000;
         }
+        
+        .contacts .slider_detail {
+            width: 260px;
+        }
 
-/* FOOTER */
+/* ======================== PAGE CATALOG ======================== */
+/* Section Caprion */
+.caption {
+    
+}
+
+    .caption .container {
+        box-sizing: border-box;
+        padding: 34px 0 40px 60px;
+    }
+
+        .caption_title {
+            margin: 0;
+            font: 47px 'GilroyExtraBold', 'Arial', sans-serif;
+            color: #000;
+        }
+        
+        .caption_breadcrumbs {
+            margin: 16px 0 0 0;
+            padding: 0;
+            list-style-type: none;
+            font-size: 0;
+        }
+        
+            .caption_breadcrumbs li {
+                display: inline-block;
+                vertical-align: top;
+            }
+            
+                .caption_breadcrumbs a {
+                    font: 14px/36px 'OpenSansLight', 'Arial', sans-serif;
+                    color: #000;
+                    text-decoration: none;
+                    cursor: pointer;
+                    opacity: 0.3;
+                }
+                
+                .caption_breadcrumbs a:hover {
+                    opacity: 0.6;
+                }
+                
+                .caption_breadcrumbs a:active {
+                    opacity: 0.1;
+                }
+                
+                    .caption_breadcrumbs li:not(:last-child) a::after {
+                        content: "";
+                        display: inline-block;
+                        width: 4px;
+                        height: 7px;
+                        background-image: url("../img/sprite-bg.png");
+                        background-repeat: no-repeat;
+                        background-position: -340px 0;
+                        margin: 0 20px 0 17px;
+                    }
+                
+                .caption_breadcrumbs li:last-child a {
+                    cursor: default;
+                }
+
+/* Section Catalog */             
+.catalog {
+    width: 100%;
+    display: table;
+}
+
+    .catalog_left {
+        display: table-cell;
+        background-color: #eee;
+    }
+    
+        .catalog_left::before {
+            content: "";
+            display: block;
+            height: 70px;
+            background-color: #dbdbdb;
+        }
+    
+    .catalog_right {
+        display: table-cell;
+        background-color: #fff;
+    }
+    
+        .catalog_right::before {
+            content: "";
+            display: block;
+            height: 70px;
+            background-color: #ebebeb;
+        }
+    
+    .catalog_center {
+        display: table-cell;
+        width: 1160px;
+        height: 500px;
+        vertical-align: top;
+        font-size: 0;
+    }
+
+        .filter {
+            display: inline-block;
+            vertical-align: top;
+            width: 328px;
+            background-color: #eee;
+            height: 100%;
+        }
+        
+            .filter .filter_title {
+                font: 16px/70px 'GilroyExtraBold', 'Arial', sans-serif;
+                background-color: #dbdbdb;
+                position: relative;
+                z-index: 1;
+                padding-left: 60px;
+                box-sizing: border-box;
+            }
+        
+        .goods {
+            display: inline-block;
+            vertical-align: top;
+            width: 832px;
+            height: 100%;
+            font: 16px/70px 'GilroyExtraBold', 'Arial', sans-serif;
+        }
+        
+            .goods_sorting {
+                height: 70px;
+                background-color: #ebebeb;
+            }
+
+
+/* ======================== FOOTER ======================== */
 .footer {
     background-color: #464646;
     padding: 67px 0 85px;
@@ -865,6 +1028,8 @@ body {
         
         .footer_btn_wrap {
             float: right;
+            width: 326px;
+            font-size: 0;
         }
         
             .footer_btn_wrap a {
@@ -1051,7 +1216,7 @@ body {
                 opacity: 0.1;
             }
 
-/* POPUP */
+/* ======================== POPUP ======================== */
 .popup {
     width: 960px;
     height: 553px;
@@ -1184,7 +1349,7 @@ body {
             opacity: 0.3;
         }
 
-/* POPUP-map */
+/* ======================== POPUP-map ======================== */
 .paranja {
     position: fixed;
     z-index: 1000;
