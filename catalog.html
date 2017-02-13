@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Device</title>
+    <title>Device - Catalog</title>
     <link href="css/normalize.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
   </head>
@@ -12,12 +12,13 @@
         <!-- header - first block -->
         <div class="search_wrap clearfix">
             <!-- logo -->
-            <a class="header_logo">Device</a>
+            <a class="header_logo" href="#">Device</a>
         
             <div class="button_wrap clearfix">
                 <a class="button_cart btn_style" href="#">Корзина</a>
                 <a class="button_compare btn_style" href="#">Сравнить</a>
-                <a class="button_enter btn_style" href="#">Войти</a>
+                <a class="button_enter btn_style" href="#">Валентин Петухов</a>
+                <a class="button_exit btn_style" href="#">Выход</a>
             </div>
             
             <form class="search_form" action="" method="get">
@@ -69,13 +70,136 @@
     <section class="catalog">
         <div class="catalog_left"></div>
         <div class="catalog_center">
+            <!-- Filter -->
             <div class="filter">
                 <div class="filter_title">Фильтр:</div>
+                <form class="filter_form" action="" method="get">
+                    <div class="filter_item">
+                        <div class="filter_name">Стоимость</div>
+                        <div class="filter_range">
+                            <div class="range_scale">
+                                <div class="range_line"></div>
+                                <div class="range_switch range_left"></div>
+                                <div class="range_switch range_right"></div>
+                            </div>
+                            <label class="range_label">от
+                                <input type="text" name="range_first" value="0" />
+                            </label>
+                            <label class="range_label">до
+                                <input type="text" name="range_last" value="5000" />
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter_item">
+                        <div class="filter_name">Цвет</div>
+                        
+                        <input id="fl_black" class="filter_color" type="checkbox" name="color[]" value="black" checked />
+                        <label for="fl_black" class="label_color">Черный</label>
+                                   
+                        <input id="fl_white" class="filter_color" type="checkbox" name="color[]" value="white" />
+                        <label for="fl_white" class="label_color">Белый</label>
+                                   
+                        <input id="fl_blue" class="filter_color" type="checkbox" name="color[]" value="blue" checked />
+                        <label for="fl_blue" class="label_color">Синий</label>
+                                   
+                        <input id="fl_red" class="filter_color" type="checkbox" name="color[]" value="red" checked />
+                        <label for="fl_red" class="label_color">Красный</label>
+                                   
+                        <input id="fl_pink" class="filter_color" type="checkbox" name="color[]" value="pink" />
+                        <label for="fl_pink" class="label_color">Розовый</label>
+                    </div>
+                    
+                    <div class="filter_item">
+                        <div class="filter_name">Bluetooth</div>
+                        
+                        <input id="fl_bt_yes" class="filter_bluetooth" type="radio" name="bluetooth" value="1" checked />
+                        <label for="fl_bt_yes" class="label_bluetooth">Есть</label>
+                        
+                        <input id="fl_bt_no" class="filter_bluetooth" type="radio" name="bluetooth" value="0" />
+                        <label for="fl_bt_no" class="label_bluetooth">Нет</label>
+                    </div>
+                    
+                    <button class="filter_btn" type="submit">Показать</button>
+                </form>
             </div>
             
+            <!-- Goods -->
             <div class="goods">
+                <!-- goods_sorting -->
                 <div class="goods_sorting">
-                Sortirovka
+                    <div class="sorting_title">Сортировка:</div>
+                    <div class="sorting_arrow">
+                        <span class="arrow"></span>
+                        <span class="arrow arrow_on"></span>
+                    </div>
+                    <ul class="sorting_name">
+                        <li class="sorting_active">По цене</li>
+                        <li>По типу</li>
+                        <li>По популярности</li>
+                    </ul>
+                </div>
+                
+                <!-- goods_wrap -->
+                <div class="goods_wrap">
+                    <div class="goods_item">
+                        <div class="goods_image">
+                            <img src="img/goods-1.jpg" alt="goods-1" width="360" height="380" />
+                            <div class="goods_hover">
+                                <a class="abb_to_cart" href="#">В корзину</a>
+                                <a class="add_to_compare" href="#">Добавить к сравнению</a>
+                            </div>
+                        </div>
+                        <h3 class="goods_name"><a href="#">Любительская селфи-палка</a></h3>
+                        <span class="goods_price">500 руб.</span>
+                    </div>
+                    
+                    <div class="goods_item clearfix">
+                        <div class="goods_image">
+                            <img src="img/goods-2.jpg" alt="goods-2" width="360" height="380" />
+                            <div class="goods_hover">
+                                <a class="abb_to_cart" href="#">В корзину</a>
+                                <a class="add_to_compare" href="#">Добавить к сравнению</a>
+                            </div>
+                        </div>
+                        <h3 class="goods_name"><a href="#">Профессиональная селфи-палка</a></h3>
+                        <span class="goods_price">1500 руб.</span>
+                    </div>
+                    
+                    <div class="goods_item clearfix">
+                        <div class="goods_image">
+                            <img src="img/goods-3.jpg" alt="goods-3" width="360" height="380" />
+                            <div class="goods_hover">
+                                <a class="abb_to_cart" href="#">В корзину</a>
+                                <a class="add_to_compare" href="#">Добавить к сравнению</a>
+                            </div>
+                        </div>
+                        <h3 class="goods_name"><a href="#">Непотопляемая селфи-палка</a></h3>
+                        <span class="goods_price">2500 руб.</span>
+                    </div>
+                    
+                    <div class="goods_item clearfix">
+                        <div class="goods_image goods_new">
+                            <img src="img/goods-4.jpg" alt="goods-4" width="360" height="380" />
+                            <div class="goods_hover">
+                                <a class="abb_to_cart" href="#">В корзину</a>
+                                <a class="add_to_compare" href="#">Добавить к сравнению</a>
+                            </div>
+                        </div>
+                        <h3 class="goods_name"><a href="#">Селфи-палка &laquo;Следуй за мной&raquo;</a></h3>
+                        <span class="goods_price">4900 руб.</span>
+                    </div>
+                </div>
+                
+                <!-- goods_pag -->
+                <div class="goods_pag">
+                    <a class="pag_btn prev" href="#">Назад</a>
+                    <a class="pag_btn next" href="#">Вперед</a>
+                    <div class="pag_page">
+                        <a class="page_active" href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                    </div>
                 </div>
             </div>
         </div>
