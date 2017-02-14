@@ -30,6 +30,7 @@ html {
 body {
     padding-top: 40px;
     height: 100%;
+    min-width: 1200px;
 }
 
 .container {
@@ -885,62 +886,58 @@ body {
 /* ======================== PAGE CATALOG ======================== */
 /* Section Caprion */
 .caption {
-    
+    box-sizing: border-box;
+    padding: 34px 0 40px 60px;
 }
 
-    .caption .container {
-        box-sizing: border-box;
-        padding: 34px 0 40px 60px;
+    .caption_title {
+        margin: 0;
+        font: 47px 'GilroyExtraBold', 'Arial', sans-serif;
+        color: #000;
     }
-
-        .caption_title {
-            margin: 0;
-            font: 47px 'GilroyExtraBold', 'Arial', sans-serif;
-            color: #000;
+    
+    .caption_breadcrumbs {
+        margin: 16px 0 0 0;
+        padding: 0;
+        list-style-type: none;
+        font-size: 0;
+    }
+    
+        .caption_breadcrumbs li {
+            display: inline-block;
+            vertical-align: top;
         }
         
-        .caption_breadcrumbs {
-            margin: 16px 0 0 0;
-            padding: 0;
-            list-style-type: none;
-            font-size: 0;
-        }
-        
-            .caption_breadcrumbs li {
-                display: inline-block;
-                vertical-align: top;
+            .caption_breadcrumbs a {
+                font: 14px/36px 'OpenSansLight', 'Arial', sans-serif;
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+                opacity: 0.3;
             }
             
-                .caption_breadcrumbs a {
-                    font: 14px/36px 'OpenSansLight', 'Arial', sans-serif;
-                    color: #000;
-                    text-decoration: none;
-                    cursor: pointer;
-                    opacity: 0.3;
+            .caption_breadcrumbs li:not(:last-child) a:hover {
+                opacity: 0.6;
+            }
+            
+            .caption_breadcrumbs li:not(:last-child) a:active {
+                opacity: 0.1;
+            }
+            
+                .caption_breadcrumbs li:not(:last-child) a::after {
+                    content: "";
+                    display: inline-block;
+                    width: 4px;
+                    height: 7px;
+                    background-image: url("../img/sprite-bg.png");
+                    background-repeat: no-repeat;
+                    background-position: -340px 0;
+                    margin: 0 20px 0 17px;
                 }
-                
-                .caption_breadcrumbs li:not(:last-child) a:hover {
-                    opacity: 0.6;
-                }
-                
-                .caption_breadcrumbs li:not(:last-child) a:active {
-                    opacity: 0.1;
-                }
-                
-                    .caption_breadcrumbs li:not(:last-child) a::after {
-                        content: "";
-                        display: inline-block;
-                        width: 4px;
-                        height: 7px;
-                        background-image: url("../img/sprite-bg.png");
-                        background-repeat: no-repeat;
-                        background-position: -340px 0;
-                        margin: 0 20px 0 17px;
-                    }
-                
-                .caption_breadcrumbs li:last-child a {
-                    cursor: default;
-                }
+            
+            .caption_breadcrumbs li:last-child a {
+                cursor: default;
+            }
 
 /* Section Catalog */             
 .catalog {
@@ -1321,8 +1318,6 @@ body {
                 }
                 
                     .goods_image {
-                        width: 360px;
-                        height: 380px;
                         margin-bottom: 32px;
                         position: relative;
                     }
@@ -1330,6 +1325,21 @@ body {
                     .goods_image:hover {
                         cursor: pointer;
                     }
+                    
+                        .goods_img {
+                            width: 360px;
+                            height: 380px;
+                        }
+                        
+                            .goods_image img {
+                                display: block;
+                                width: 100%;
+                            }
+                        
+                            .goods_image:hover > .goods_img {
+                                background-color: #eeeeee;
+                                opacity: 0.7;
+                            }
                     
                     .goods_new::before {
                         content: "new";
@@ -1346,15 +1356,6 @@ body {
                         text-transform: uppercase;
                         text-align: center;
                     }
-                    
-                        .goods_image img {
-                            display: block;
-                            width: 100%;
-                        }
-                        
-                        .goods_image:hover > img {
-                            opacity: 0.3;
-                        }
                         
                         .goods_price {
                             float: right;
@@ -1435,6 +1436,7 @@ body {
                         float: left;
                         width: 260px;
                         height: 44px;
+                        overflow: hidden;
                     }
                     
                         .goods_name a {
@@ -1445,13 +1447,13 @@ body {
                         }
             
             /* Goods - pagination */
-            .goods_pag {
+            .goods_pagination {
                 margin: 40px 0 0 72px;
                 height: 70px;
                 background-color: #ebebeb;
             }
             
-                .pag_btn {
+                .pagination_btn {
                     font: 16px/70px 'GilroyExtraBold', 'Arial', sans-serif;
                     color: #000;
                     text-transform: uppercase;
@@ -1461,11 +1463,11 @@ body {
                     cursor: pointer;
                 }
                 
-                .pag_btn:hover {
+                .pagination_btn:hover {
                     background-color: #d9d9d9;
                 }
                 
-                .pag_btn:active {
+                .pagination_btn:active {
                     color: rgba(0, 0, 0, 0.3);
                 }
                 
@@ -1479,13 +1481,13 @@ body {
                     width: 137px;
                 }
                 
-                .pag_page {
+                .pagination_page {
                     margin: 0 137px 0 126px;
                     text-align: center;
                     font-size: 0;
                 }
                 
-                    .pag_page a {
+                    .pagination_page a {
                         display: inline-block;
                         width: 30px;
                         vertical-align: top;
@@ -1495,12 +1497,12 @@ body {
                         text-align: center;
                     }
                     
-                    .pag_page a:not(.page_active):hover {
+                    .pagination_page a:not(.page_active):hover {
                         color: rgba(0, 0, 0, 0.6);
                     }
                     
-                    .goods_pag .pag_page a:active,
-                    .pag_page .page_active {
+                    .goods_pagination .pagination_page a:active,
+                    .pagination_page .page_active {
                         color: rgba(0, 0, 0, 1);
                     }
                         
