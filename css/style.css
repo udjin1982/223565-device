@@ -866,6 +866,7 @@ body {
             background-repeat: no-repeat;
             position: relative;
             z-index: 100;
+            cursor: pointer;
         }
         
         .contacts_map:after {
@@ -1241,6 +1242,7 @@ body {
                         background-repeat: no-repeat;
                         cursor: pointer;
                         opacity: 0.2;
+                        -webkit-transform: rotate(180deg);
                         transform: rotate(180deg);
                     }
                     
@@ -1263,6 +1265,7 @@ body {
                     }
                     
                     .arrow_on {
+                        -webkit-transform: rotate(0deg);
                         transform: rotate(0deg);
                     }
                 
@@ -1329,6 +1332,7 @@ body {
                         .goods_img {
                             width: 360px;
                             height: 380px;
+                            background-color: #eeeeee;
                         }
                         
                             .goods_image img {
@@ -1836,10 +1840,12 @@ body {
         }
         
         .popup_close::before {
+            -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
         }
         
         .popup_close::after {
+            -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
         }
         
