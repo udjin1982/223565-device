@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Device - Catalog</title>
     <link href="css/normalize.css" rel="stylesheet" />
-    <link href="css/style.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
     <!-- HEADER -->
-    <header class="header container">
+    <header id="header" class="header container">
+        <!-- logo -->
+        <a class="logo" href="index.html">Device</a>
+        
         <!-- header - first block -->
         <div class="search_wrap clearfix">
-            <!-- logo -->
-            <a class="header_logo" href="index.html">Device</a>
-        
             <div class="button_wrap clearfix">
                 <a class="button_cart btn_style" href="#">Корзина</a>
                 <a class="button_compare btn_style" href="#">Сравнить</a>
@@ -60,14 +60,13 @@
         <ul class="caption_breadcrumbs">
             <li><a href="index.html">Главная</a></li>
             <li><a href="#">Каталог товаров</a></li>
-            <li><a>Моноподы для селфи</a></li>
+            <li class="last_breadcrumbs">Моноподы для селфи</a></li>
         </ul>
     </section>
     
     <!-- SECTION CATALOG -->
     <section class="catalog">
-        <div class="catalog_left"></div>
-        <div class="catalog_center">
+        <div class="container">
             <!-- Filter -->
             <aside class="filter">
                 <div class="filter_title">Фильтр:</div>
@@ -132,9 +131,9 @@
                         <span class="arrow arrow_on"></span>
                     </div>
                     <ul class="sorting_name">
-                        <li class="sorting_active">По цене</li>
-                        <li>По типу</li>
-                        <li>По популярности</li>
+                        <li><a class="sorting_active" href="#">По цене</a></li>
+                        <li><a href="#">По типу</a></li>
+                        <li><a href="#">По популярности</a></li>
                     </ul>
                 </div>
                 
@@ -206,14 +205,13 @@
                     <a class="pagination_btn prev" href="#">Назад</a>
                     <a class="pagination_btn next" href="#">Вперед</a>
                     <div class="pagination_page">
-                        <a class="pagination_active">1</a>
+                        <a class="page_active">1</a>
                         <a href="#">2</a>
                         <a href="#">3</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="catalog_right"></div>
     </section>
     
     <!-- FOOTER -->
