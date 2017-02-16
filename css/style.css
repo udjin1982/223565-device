@@ -63,20 +63,17 @@ body {
     background-color: #f7e296;
     padding: 0 60px 53px;
     box-sizing: border-box;
-    position: relative;
-    
 }
 
     .logo {
+        display: block;
         font: 48px/34px 'GilroyExtraBold', 'Arial', sans-serif;
         text-transform: uppercase;
         text-decoration: none;
         color: #000;
         cursor: pointer;
-        position: absolute;
-        top: -18px;
-        left: 60px;
-        z-index: 2;
+        -webkit-transform: translateY(-18px);
+        transform: translateY(-18px);
     }
     
         .logo:hover {
@@ -472,7 +469,7 @@ body {
         
         .sliders_btn {
             position: absolute;
-            top: 378px;
+            bottom: 247px;
             right: 84px;
             z-index: 100;
         }
