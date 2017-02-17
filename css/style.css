@@ -87,7 +87,6 @@ body {
     /* header first block */
     .search_wrap {
         position: relative;
-        padding-top: 33px;
     }
     
         .button_wrap {
@@ -166,7 +165,7 @@ body {
         
             .search_form input[type="text"] {
                 width: 355px;
-                padding-left: 39px;
+                padding-left: 37px;
                 color: rgba(0, 0, 0, 0.3);
             }
             
@@ -240,6 +239,7 @@ body {
             .nav_page a:first-child {
                 float: right;
                 text-align: right;
+                transform: translateX(5px);
             }
         
         .nav_btn {
@@ -363,8 +363,9 @@ body {
             .slider_title {
                 font: 47px 'GilroyExtraBold', 'Arial', sans-serif;
                 color: #000;
-                margin: 80px 0 20px;
+                margin: 78px 0 16px;
                 position: relative;
+                letter-spacing: 0.01em;
             }
             
             .slider .slider_title:before {
@@ -382,6 +383,7 @@ body {
                 font: 15px/30px 'OpenSansLight', 'Arial', sans-serif;
                 color: #464646;
                 margin: 0;
+                letter-spacing: 0.01em;
             }
             
             .slider_detail {
@@ -395,7 +397,7 @@ body {
                 letter-spacing: 0.2em;
                 text-decoration: none;
                 text-transform: uppercase;
-                margin-top: 45px;
+                margin-top: 43px;
                 position: relative;
             }
             
@@ -423,6 +425,7 @@ body {
             .slider_options {
                 margin-top: 52px;
                 border-collapse: collapse;
+                letter-spacing: 0.01em;
             }
             
                 .slider_options tr:first-child {
@@ -436,21 +439,25 @@ body {
                 }
                 
                     .slider_options td {
-                        width: 160px;
+                        width: 157px;
                         height: 30px;
-                        vertical-align: top;
+                        vertical-align: middle;
                     }
                     
                     .slider_options td:nth-child(2) {
-                        width: 140px;
+                        width: 138px;
+                    }
+                    
+                    .slider_options tr:last-child td {
+                        padding-top: 3px;
                     }
             
             
             .slider::before {
                 display: block;
                 position: absolute;
-                top: -32px;
-                right: 60px;
+                top: -33px;
+                right: 47px;
                 color: #fff;
                 font: 180px 'GilroyExtraBold', 'Arial', sans-serif;
             }
@@ -469,8 +476,8 @@ body {
         
         .sliders_btn {
             position: absolute;
-            bottom: 247px;
-            right: 84px;
+            bottom: 251px;
+            right: 83px;
             z-index: 100;
         }
             
@@ -1863,6 +1870,43 @@ body {
             opacity: 0.3;
         }
 
+/* ======================== ANIMATION ======================== */
+@keyframes popup_show {
+    0% {
+        transform: translateY(2000px);
+    }
+    80% {
+        transform: translateY(-30px);
+    }
+    90% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes popup_hide {
+    0% {
+        transform: translateY(0);
+    }
+    90% {
+        transform: translateY(1000px);
+    }
+    100% {
+        transform: translateY(2000px);
+    }
+}
+
+.popup_show {
+    display: block;
+    animation: popup_show 0.7s;
+}
+
+.popup_hide {
+    animation: popup_hide 0.7s;
+}
+
 /* ======================== POPUP-map ======================== */
 .paranja {
     position: fixed;
@@ -1887,4 +1931,41 @@ body {
         margin: auto;
         z-index: 200;
         box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
+        display: none;
     }
+
+@keyframes popup_map_show {
+    0% {
+        transform: translateY(2000px);
+    }
+    80% {
+        transform: translateY(-30px);
+    }
+    90% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes popup_map_hide {
+    0% {
+        transform: translateY(0);
+    }
+    90% {
+        transform: translateY(1000px);
+    }
+    100% {
+        transform: translateY(2000px);
+    }
+}
+
+.popup_map_show {
+    display: block;
+    animation: popup_map_show 0.7s;
+}
+
+.popup_map_hide {
+    animation: popup_map_hide 0.7s;
+}

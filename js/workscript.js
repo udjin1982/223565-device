@@ -38,30 +38,67 @@ serviceSlider.addEventListener('click', function(event){
 });
 
 /* ================ Popup ================ */
-    /* open */
-    var openPopup = document.getElementById('js_popup_open');
-    openPopup.addEventListener('click', function(event){
-        event.preventDefault();
-        var popup = document.querySelector('.popup');
-        popup.style.display = 'block';
-    });
-    /* close */
-    var closePopup = document.getElementById('js_popup_close');
-    closePopup.addEventListener('click', function(event){
-        var popup = document.querySelector('.popup');
-        popup.style.display = '';
-    });
+/* open popup */
+var openPopup = document.getElementById('js_popup_open');
+openPopup.addEventListener('click', function(event){
+    event.preventDefault();
+    document.querySelector('.popup').classList.add('popup_show');
+});
 
-/* ================ Popup-map ================ */
-/* open */
+/* close popup */
+var closePopup = document.getElementById('js_popup_close');
+closePopup.addEventListener('click', function(event){
+    var popup = document.querySelector('.popup');
+    popupHide(popup);
+});
+
+/* function for close popup */
+function popupHide(element){
+    element.classList.add('popup_hide');
+    setTimeout(function(){
+        element.classList.remove('popup_show');
+        element.classList.remove('popup_hide');
+    }, 700);
+}
+
+
+/* ================ PopupMap ================ */
+/* open popupMap */
 var openPopupMap = document.querySelector('.contacts_map');
 openPopupMap.addEventListener('click', function(event){
     event.preventDefault();
-    var popupMap = document.querySelector('.paranja');
-    popupMap.style.display = 'block';
+    var paranja = document.querySelector('.paranja');
+    paranja.style.display = 'block';
+    document.querySelector('.popup_map').classList.add('popup_map_show');
 });
-/* close */
+
+/* close popupMap */
 var paranja = document.querySelector('.paranja');
 paranja.addEventListener('click', function(event){
-    paranja.style.display = '';
+    var popupMap = document.querySelector('.popup_map');
+    popupMapHide(popupMap);
+});
+
+/* function for close popupMap */
+function popupMapHide(element){
+    element.classList.add('popup_map_hide');
+    setTimeout(function(){
+        element.classList.remove('popup_map_show');
+        element.classList.remove('popup_map_hide');
+        paranja.style.display = '';
+    }, 700);
+}
+
+/* keydown - escape: close popup and popupMap */
+document.addEventListener('keydown', function(event){
+    if(event.keyCode === 27){
+        var popup = document.querySelector('.popup');
+        var popupMap = document.querySelector('.popup_map');
+        if(popup.classList.contains('popup_show')){
+            popupHide(popup);
+        }
+        if(popupMap.classList.contains('popup_map_show')){
+            popupMapHide(popupMap);
+        }
+    }
 });
