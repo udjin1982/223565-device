@@ -42,7 +42,41 @@ serviceSlider.addEventListener('click', function(event){
 var openPopup = document.getElementById('js_popup_open');
 openPopup.addEventListener('click', function(event){
     event.preventDefault();
-    document.querySelector('.popup').classList.add('popup_show');
+    document.body.style.overflow = 'hidden';
+    
+    var popup = document.querySelector('.popup');
+    popup.classList.add('popup_show');
+    
+    var name = popup.querySelector('[name="name"]');
+    var email = popup.querySelector('[name="email"]');
+    var text = popup.querySelector('textarea');
+    var nameStorage = localStorage.getItem('name');
+    var emailStorage = localStorage.getItem('email');
+    var form = popup.querySelector('.popup_form');
+    
+    if(nameStorage){
+        name.value = nameStorage;
+        if(emailStorage){
+            email.value = emailStorage;
+            text.focus();
+        }else{
+            email.focus();
+        }
+    }else{
+        name.focus();
+    }
+    
+    form.addEventListener('submit', function(event){
+        if(!name.value || !email.value || !text.value){
+            event.preventDefault();
+            popup.classList.remove('popup_error');
+            void popup.offsetWidth;
+            popup.classList.add('popup_error');
+        }else{
+            localStorage.setItem('name', name.value);
+            localStorage.setItem('email', email.value);
+        }
+    });
 });
 
 /* close popup */
@@ -55,9 +89,11 @@ closePopup.addEventListener('click', function(event){
 /* function for close popup */
 function popupHide(element){
     element.classList.add('popup_hide');
+    document.body.style.overflow = '';
     setTimeout(function(){
         element.classList.remove('popup_show');
         element.classList.remove('popup_hide');
+        element.classList.remove('popup_error');
     }, 700);
 }
 
@@ -70,6 +106,7 @@ openPopupMap.addEventListener('click', function(event){
     var paranja = document.querySelector('.paranja');
     paranja.style.display = 'block';
     document.querySelector('.popup_map').classList.add('popup_map_show');
+    document.body.style.overflow = 'hidden';
 });
 
 /* close popupMap */
@@ -82,6 +119,7 @@ paranja.addEventListener('click', function(event){
 /* function for close popupMap */
 function popupMapHide(element){
     element.classList.add('popup_map_hide');
+    document.body.style.overflow = '';
     setTimeout(function(){
         element.classList.remove('popup_map_show');
         element.classList.remove('popup_map_hide');
