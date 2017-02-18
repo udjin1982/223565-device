@@ -312,7 +312,7 @@ body {
 /* SECTION SLIDER */
 .sliders {
     font-size: 0;
-    padding: 0 0 104px 0;
+    padding: 0 0 93px 0;
     position: relative;
     z-index: 1;
 }
@@ -332,6 +332,7 @@ body {
         position: relative;
         display: none;
         z-index: 1;
+        min-height: 497px;
     }
     
     .slider_active {
@@ -385,6 +386,7 @@ body {
                 color: #464646;
                 margin: 0;
                 letter-spacing: 0.01em;
+                width: 485px;
             }
             
             .slider_detail {
@@ -838,6 +840,7 @@ body {
             padding-right: 85px;
             box-sizing: border-box;
             letter-spacing: 0;
+            width: auto;
         }
         
         .contacts .slider_text {
@@ -845,6 +848,7 @@ body {
             padding-right: 50px;
             box-sizing: border-box;
             letter-spacing: 0;
+            width: auto;
         }
         
         .about_list {

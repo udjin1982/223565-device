@@ -87,16 +87,16 @@ closePopup.addEventListener('click', function(event){
 });
 
 /* function for close popup */
-function popupHide(element){
-    element.classList.add('popup_hide');
+function popupHide(elem){
     document.body.style.overflow = '';
+    elem.classList.add('popup_hide');
+    
     setTimeout(function(){
-        element.classList.remove('popup_show');
-        element.classList.remove('popup_hide');
-        element.classList.remove('popup_error');
+        elem.classList.remove('popup_error');
+        elem.classList.remove('popup_show');
+        elem.classList.remove('popup_hide');
     }, 700);
 }
-
 
 /* ================ PopupMap ================ */
 /* open popupMap */
@@ -117,12 +117,13 @@ paranja.addEventListener('click', function(event){
 });
 
 /* function for close popupMap */
-function popupMapHide(element){
-    element.classList.add('popup_map_hide');
+function popupMapHide(elem){
     document.body.style.overflow = '';
+    elem.classList.add('popup_map_hide');
+    
     setTimeout(function(){
-        element.classList.remove('popup_map_show');
-        element.classList.remove('popup_map_hide');
+        elem.classList.remove('popup_map_show');
+        elem.classList.remove('popup_map_hide');
         paranja.style.display = '';
     }, 700);
 }
