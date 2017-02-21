@@ -1234,31 +1234,68 @@ body {
         }
         
             .goods_sorting {
+                display: table-cell;
+                vertical-align: middle;
                 height: 70px;
                 background-color: #ebebeb;
                 padding-left: 72px;
                 box-sizing: border-box;
+                font-size: 0;
             }
             
                 .sorting_title {
-                    float: left;
-                    width: 160px;
-                    font: 16px/70px 'GilroyExtraBold', 'Arial', sans-serif;
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 200px;
+                    font: 16px 'GilroyExtraBold', 'Arial', sans-serif;
                     letter-spacing: 0.2em;
                     text-transform: uppercase;
                 }
                 
+                .sorting_name {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 500px;
+                    padding: 0;
+                }
+                
+                    .sorting_name li {
+                        display: inline-block;
+                        vertical-align: top;
+                        margin-right: 30px;
+                    }
+                    
+                    .sorting_name a {
+                        display: block;
+                        font: 14px 'OpenSans', 'Arial', sans-serif;
+                        color: rgba(0, 0, 0, 0.3);
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                    
+                    .sorting_name li:last-child {
+                        margin-right: 0;
+                    }
+                    
+                    .sorting_name a:not(.sorting_active):hover {
+                        color: rgba(0, 0, 0, 0.6);
+                    }
+                    
+                    .sorting_name a:hover:active,
+                    .sorting_name .sorting_active {
+                        color: rgba(0, 0, 0, 1);
+                    }
+                
                 .sorting_arrow {
-                    float: right;
+                    display: inline-block;
+                    vertical-align: top;
                     width: 60px;
-                    font-size: 0;
-                    padding-top: 30px;
+                    padding-top: 5px;
                 }
                 
                     .arrow {
                         display: inline-block;
                         vertical-align: top;
-                        line-height: 70px;
                         width: 17px;
                         height: 9px;
                         background-image: url("../img/sprite-bg.png");
@@ -1290,39 +1327,6 @@ body {
                     .arrow_on {
                         -webkit-transform: rotate(0deg);
                         transform: rotate(0deg);
-                    }
-                
-                .sorting_name {
-                    margin: 0 60px 0 200px;
-                    font-size: 0;
-                    padding: 0;
-                }
-                
-                    .sorting_name li {
-                        display: inline-block;
-                        vertical-align: top;
-                        margin-right: 30px;
-                    }
-                    
-                    .sorting_name a {
-                        display: block;
-                        font: 14px/70px 'OpenSans', 'Arial', sans-serif;
-                        color: rgba(0, 0, 0, 0.3);
-                        text-decoration: none;
-                        cursor: pointer;
-                    }
-                    
-                    .sorting_name li:last-child {
-                        margin-right: 0;
-                    }
-                    
-                    .sorting_name a:not(.sorting_active):hover {
-                        color: rgba(0, 0, 0, 0.6);
-                    }
-                    
-                    .sorting_name a:hover:active,
-                    .sorting_name .sorting_active {
-                        color: rgba(0, 0, 0, 1);
                     }
             
             /* Goods wrapper */
